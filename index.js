@@ -2,7 +2,6 @@ import {
   getTomatomatelaSrc,
   getTomatomatelaEmbed,
   getFile,
-  testRedirect,
 } from "./services/cuevana.js";
 const url = "https://ww1.cuevana3.me/61578/doragon-boru-supa-supa-hiro";
 
