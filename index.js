@@ -30,6 +30,8 @@ app.listen(3000, () => {
   console.log("Express server listening on 3000 - Vercel");
 });
 
+module.exports = app;
+
 // const url = "https://ww1.cuevana3.me/61578/doragon-boru-supa-supa-hiro";
 // const url = "https://ww1.cuevana3.me/59691/thor-love-and-thunder";
 // const url = "https://www.ennovelas.com/bqoary82m9ie";
