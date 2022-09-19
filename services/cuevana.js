@@ -28,7 +28,7 @@ const getTomatomatelaEmbed = async urlPrm => {
       totalLoaded++;
       const _redirectUrl = page.url();
 
-      console.log("page load", { _redirectUrl });
+      // console.log("page load", { _redirectUrl });
       if (_redirectUrl?.indexOf("embed.html") != -1) {
         resolve(_redirectUrl);
       }
