@@ -8,6 +8,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
+  const { url } = req.query;
+  res.send({ url });
+});
+
+app.get("/ping", (req, res) => {
   res.send("MOVIE API");
 });
 
