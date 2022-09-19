@@ -1,17 +1,10 @@
-import {
-  getTomatomatelaSrc,
-  getTomatomatelaEmbed,
-  getFile,
-} from "./services/cuevana.js";
-const url = "https://ww1.cuevana3.me/61578/doragon-boru-supa-supa-hiro";
+import getVideoUrlController from "./controllers/getVideoUrl.js";
+
+// const url = "https://ww1.cuevana3.me/61578/doragon-boru-supa-supa-hiro";
+// const url = "https://ww1.cuevana3.me/59691/thor-love-and-thunder";
+const url = "https://www.ennovelas.com/bqoary82m9ie";
 
 (async () => {
-  let src = await getTomatomatelaSrc(url);
-  const embed = await getTomatomatelaEmbed(src);
-
-  let file = embed.split("#")[1];
-  let checkUrl = "https://tomatomatela.com/details.php?v=" + file;
-
-  const data = await getFile(checkUrl);
+  const data = await getVideoUrlController({ url });
   console.log({ data });
 })();
