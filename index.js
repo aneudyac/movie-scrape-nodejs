@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import getVideoUrlController from "./controllers/getVideoUrl.js";
+const express = require("express");
+const cors = require("cors");
+const getVideoUrlController = require("./controllers/getVideoUrl.js");
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.get("/get-stream", async (req, res) => {
   try {
     const { url } = req.query;
     const data = await getVideoUrlController({ url });
-    res.send(data);
+    res.send({ data });
   } catch (error) {
     res.status(500).send(error.message || error);
   }
@@ -29,8 +29,6 @@ app.get("/get-stream", async (req, res) => {
 app.listen(3000, () => {
   console.log("Express server listening on 3000 - Vercel");
 });
-
-export default app;
 
 // const url = "https://ww1.cuevana3.me/61578/doragon-boru-supa-supa-hiro";
 // const url = "https://ww1.cuevana3.me/59691/thor-love-and-thunder";

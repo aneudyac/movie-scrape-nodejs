@@ -1,7 +1,7 @@
-import cuevana from "./cuevana.js";
-import ennovelas from "./ennovelas.js";
+const cuevana = require("./cuevana.js");
+const ennovelas = require("./ennovelas.js");
 
-export default url => {
+module.exports = url => {
   const _url = new URL(url);
 
   if (_url.host === "ww1.cuevana3.me") {

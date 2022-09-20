@@ -1,6 +1,6 @@
-import fetch from "node-fetch";
-import cheerio from "cheerio";
-import { chromium } from "playwright";
+const fetch = require("node-fetch");
+const cheerio = require("cheerio");
+const { chromium } = require("playwright");
 
 const getTomatomatelaSrc = async url => {
   try {
@@ -67,7 +67,7 @@ const getFile = async url => {
   }
 };
 
-export default async (url, headers) => {
+module.exports = async (url, headers) => {
   try {
     let src = await getTomatomatelaSrc(url);
     const embed = await getTomatomatelaEmbed(src);

@@ -1,8 +1,8 @@
-import fetch from "node-fetch";
-import cheerio from "cheerio";
-import { chromium } from "playwright";
+const fetch = require("node-fetch");
+const cheerio = require("cheerio");
+const { chromium } = require("playwright");
 
-export default async (url, headers) => {
+module.exports = async (url, headers) => {
   return new Promise(async (resolve, reject) => {
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();

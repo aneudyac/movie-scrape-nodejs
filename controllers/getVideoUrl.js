@@ -1,6 +1,6 @@
-import providers from "../services/providers.js";
+const providers = require("../services/providers.js");
 
-export default async ({ url, headers }) => {
+module.exports = async ({ url, headers }) => {
   try {
     const provider = providers(url);
     const videoUrl = await provider(url);
